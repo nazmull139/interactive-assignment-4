@@ -113,73 +113,20 @@ async function showCard(id){
 }
  
 
+const scrollTopBtn = document.getElementById("scrollTopBtn");
 
-/*
-const inpButton = document.getElementById("search-btn");
-inpButton.addEventListener("click", () => {
-  const inputVal = document.getElementById("search").value;
-  fetchMeals(inputVal);
+ 
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 300) {
+    scrollTopBtn.classList.remove("hidden");
+  } else {
+    scrollTopBtn.classList.add("hidden");
+  }
 });
-
-async function fetchMeals(val) {
-
-  const recipes = document.getElementById("recipes");
-  const API_URL = "https://www.themealdb.com/api/json/v1/1/search.php?s=";
-  recipes.innerHTML = "";  
-
-  const res = await axios.get(API_URL);
-
-  const data = res.data.meals;
-
-  const filtered = data.filter((meal) =>
-    meal.strMeal.toLowerCase().includes(val)
-  );
-
-  if (!filtered || filtered.length === 0 ) {
-    recipes.innerHTML = "<p>No data found</p>";
-     
-  }
-
-  
-  const bata = filtered.length > 0 ? filtered : data; 
  
-
-  console.log(filtered);
-  console.log('bata',bata)
- 
-
- 
-
-  for (let i = 0; i < bata.length; i++) {
-    const div = document.createElement("div");
-    const div2 = document.createElement("div");
-    const h2 = document.createElement("h2");
-    const img = document.createElement("img");
-    const p = document.createElement("p");
-
-
-    const button = document.createElement("button");
-    button.textContent = "View Details";
-    h2.textContent = bata[i].strMeal;
-    img.src = bata[i].strMealThumb;
-
-    img.classList.add("recipe-img");
-    h2.classList.add("recipe-h");
-    p.classList.add("recipe-p");
-    button.classList.add("recipe-button");
-
-    p.textContent = bata[i].strInstructions?.slice(0, 70) + "...";
-
-    div.appendChild(img);
-    div.appendChild(div2);
-    div2.appendChild(h2);
-    div2.appendChild(p);
-    div2.appendChild(button);
-    div2.classList.add("recipe-content");
-    div.classList.add("recipe-div");
-    recipes.appendChild(div);
-  }
-}
-
-fetchMeals();
-*/
+scrollTopBtn.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+});
