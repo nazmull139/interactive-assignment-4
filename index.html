@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header class=" ">
+      <nav>
+        <img src="./images/logo.png" alt="Logo" class="w-28 mx-auto mt-5" />
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+
+    <section id="hero-section" class="mt-7">
+      <div
+        class="background-image h-96 w-full flex items-center justify-center"
+        style="
+          background-image: url('./images/page-title.jpg');
+          background-size: cover;
+          background-position: center;
+        "
+      >
+        <div class="text-white">
+          <h1 class="text-4xl font-bold mb-4 text-center">
+            Search Your Favorite Recipe
+          </h1>
+          <p class="text-lg text-center">
+            A handful of simple ingredients typify the fresh vibrant flavors of
+            greek cooking
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="search-section">
+      <div class="mx-auto w-3/4 flex items-center justify-center p-4 gap-2">
+        <input
+          id="search"
+          type="text"
+          placeholder="Search..."
+          class="md:w-1/2 p-2 border border-gray-300 rounded"
+        />
+        <button id="search-btn" class="bg-yellow-400 p-2 rounded border">search</button>
+      </div>
+    </section>
+
+    <section id="recipe-section">
+      <h1 class="mx-auto text-center text-4xl mt-10">Latest Recipes</h1>
+      <div id="loading" class="loading hidden">Loading...</div>
+      <div
+        id="recipes"
+        class="grid grid-cols-1  sm:grid-cols-2 lg:grid-cols-4 gap-4 w-3/4 mx-auto my-7"
+      ></div>
+
+      <div id="card" class="card-con hide ">
+      <!-- 
+        <div  class="card-container  ">
+          <img class="recipe-img" src="./images/card.jpg" />
+          <h2 class="recipe-h">name</h2>
+          <div class="card-details">
+            <p class="recipe-p">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia quas vel accusantium aliquam similique repellendus veritatis velit, et repellat qui! Quidem explicabo, ad qui numquam ea voluptate similique odio quas culpa architecto magni saepe animi reiciendis, nesciunt quae, ipsam autem dolorem eveniet? Expedita beatae hic velit molestiae nemo! Itaque, expedita eveniet? Quod nemo obcaecati repellendus amet corrupti mollitia sapiente possimus tenetur veritatis quam. Expedita et dolore molestias quae corporis aliquam ullam aliquid quo non commodi mollitia, ratione quod dolor magni itaque vel? Eum vel placeat ullam aut illum saepe repellendus a cum consequuntur quaerat mollitia, sunt dignissimos velit natus id pariatur modi minus excepturi? Eaque, dolorum corrupti architecto optio dignissimos reprehenderit perspiciatis atque maiores possimus labore porro commodi dolores. Cum porro magni consequatur unde quidem asperiores dolore accusamus eos explicabo debitis dolorum voluptatem iusto cumque pariatur velit id exercitationem quia dolorem odio, laboriosam veniam esse? Autem atque fugiat unde nemo harum voluptatum expedita perspiciatis quis nihil quia pariatur quasi necessitatibus sed incidunt, modi inventore molestiae explicabo, adipisci dolore! Accusantium fuga error rerum, perferendis iste odio ipsum tenetur quaerat rem illo illum? Cum doloribus sunt consequuntur adipisci quis architecto vero fuga alias optio quod laboriosam tempora ab quas nobis, molestias odio?
+            </p>
+          </div>
+         
+          <button id="close-btn" class="recipe-button">Close</button>
+        </div>
+      -->  
+      </div>
+
+
+    </section>
+
+    <footer class="bg-gray-800 text-white py-4 mt-10">
+      <div class="w-3/4 mx-auto text-center">
+        <p>&copy; 2025 Your Recipe Website. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
